@@ -1,14 +1,14 @@
-package com.example.belajarspring;
+package com.example.belajarspring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 // import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-public class BelajarController {
-    @GetMapping("/")
+public class tescontroller {
+    @GetMapping("/welcome")
     public String showWelcome() {
-        return "mahasiswa";
+        return "welcome";
     }
 
     // @GetMapping("/mahasiswa")
