@@ -1,6 +1,8 @@
 package com.example.belajarspring.service;
 
 import com.example.belajarspring.model.Jurusan;
+// import com.example.belajarspring.model.Mahasiswa;
+
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,5 +23,13 @@ public class JurusanService {
             jurusanList.add(jurusan);
         }
         return jurusan;
+    }
+
+    public Jurusan getJurusanByID(Long id) {
+        return jurusanList.stream().filter(m -> m.getId().equals(id)).findFirst().orElse(null);
+    }
+
+    public void updateJurusan(Jurusan jurusan) {
+        jurusanList.replaceAll(m -> m.getId().equals(jurusan.getId()) ? jurusan : m);
     }
 }

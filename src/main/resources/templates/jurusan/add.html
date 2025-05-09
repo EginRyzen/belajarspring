@@ -9,8 +9,8 @@
                 <h4>Tambah Jurusan</h4>
             </div>
             <div class="card-body">
-                <form th:action="@{/jurusan/add}" th:object="${jurusan}" method="post" class="needs-validation"
-                    novalidate>
+                <form th:action="${isEdit ? '/jurusan/edit/' + jurusan.id : '/jurusan/add'}" th:object="${jurusan}"
+                    method="post" class="needs-validation" novalidate>
                     <div class="mb-3">
                         <label for="namaJurusan" class="form-label">Nama Jurusan</label>
                         <input id="namaJurusan" th:field="*{namaJurusan}" type="text" class="form-control" required>
