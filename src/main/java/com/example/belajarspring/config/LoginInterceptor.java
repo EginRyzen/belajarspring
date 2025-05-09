@@ -13,7 +13,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             throws Exception {
         // Allow access to login and registration pages
         String uri = request.getRequestURI();
-        if (uri.startsWith("/auth") || uri.equals("/")) {
+        if (uri.startsWith("/auth")) {
             return true;
         }
 

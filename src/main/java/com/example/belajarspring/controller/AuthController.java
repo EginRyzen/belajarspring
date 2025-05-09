@@ -26,7 +26,7 @@ public class AuthController {
         if (userService.login(username, password)) {
             HttpSession session = request.getSession();
             session.setAttribute("loggedInUser", username);
-            return "redirect:/mahasiswa";
+            return "redirect:/";
         }
         model.addAttribute("error", "Username atau password salah!");
         return "auth/login";
